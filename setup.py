@@ -10,7 +10,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['numpy=>1.17.0', 'scipy>=1.2.0', 'pandas>=1.0.0']
+requirements = ['numpy>=1.17.0', 'scipy>=1.2.0', 'pandas>=1.0.0']
 
 test_requirements = [ ]
 
@@ -31,7 +31,8 @@ setup(
     description="Package to calculate cosmic variance in pencil-beam surveys",
     install_requires=requirements,
     license="MIT license",
-    long_description = readme + '\n\n' + history,
+    long_description = readme,
+    long_description_content_type='text/x-rst',
     include_package_data = True,
     keywords = ['Cosmology', 'Galaxies', 'Statistics', 'Astrostatistics' 'Cosmic Variance'],
     name = 'cosmic_variance',
@@ -39,6 +40,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/astrockragh/pythonCV', #change later
-    version='0.0.8',
+    version='0.0.9',
     zip_safe=False,
 )

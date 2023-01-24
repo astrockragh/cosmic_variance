@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Christian Kragh Jespersen <ckragh@princeton.edu>
+* Christian Kragh Jespersen <ckragh@princeton.edu>, astrockragh
 
 Contributors
 ------------

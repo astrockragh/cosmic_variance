@@ -9,6 +9,8 @@ cosmic_variance/__pycache__
 cosmic_variance/quickcv/__pycache__
 cosmic_variance/quickcv/utils/__pycache__
 
+notes.txt
+
 # C extensions
 *.so
 

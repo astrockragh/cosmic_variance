@@ -3,7 +3,8 @@ Cosmic Variance Calculator
 ===============================
 
 Package to calculate cosmic variance in pencil-beam surveys
-----------------------------------------------------------
+---------------------------------------------------------------------------
+
 .. image:: https://img.shields.io/pypi/v/cosmic_variance.svg
         :target: https://pypi.python.org/pypi/cosmic_variance
 
@@ -21,18 +22,16 @@ The code is based on galaxy stellar mass bins (as described in https://arxiv.org
 
 This is significantly more useful than dark matter - only variance, since the empirical galaxy variance is significantly higher.
 
-* Free software: MIT license
-.. * Documentation: https://cosmic-variance.readthedocs.io.
-
+Free software: MIT license
 
 Install and Use
---------
+-------------------
 
 To install the package, simply run:
 
 .. code-block:: bash
 
-        pip install cosmic_variance
+        pip install cosmic-variance
 
 Then in your script/notebook, import the package as:
 
