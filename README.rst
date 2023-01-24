@@ -37,14 +37,12 @@ To install the package, simply run:
 Then in your script/notebook, import the package as:
 
 .. code-block:: python
-        :linenos:
 
         import cosmic_variance as cv
 
 The main use of the package is through the get_cv function, which takes in a rectangular survey geometry with side lengths side1 and side2 (in degrees), and an array of redshift bin edges, and returns a pandas dataframe with the cosmic variance for 0.5 dex galaxy stellar mass bins for each redshift bin.
 
 .. code-block:: python
-        :linenos:
 
         import cosmic_variance as cv
         import numpy as np
