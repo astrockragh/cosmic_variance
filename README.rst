@@ -8,13 +8,6 @@ Package to calculate cosmic variance in pencil-beam surveys
 .. image:: https://img.shields.io/pypi/v/cosmic_variance.svg
         :target: https://pypi.python.org/pypi/cosmic_variance
 
-.. image:: https://img.shields.io/travis/astrockragh/cosmic_variance.svg
-        :target: https://travis-ci.com/astrockragh/cosmic_variance
-
-.. image:: https://readthedocs.org/projects/cosmic-variance/badge/?version=latest
-        :target: https://cosmic-variance.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-
 
 Python package based on the IDL code released with the Cosmic Variance Cookbook of Moster et al. (2010)
 
