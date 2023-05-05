@@ -34,7 +34,7 @@ setup(
     long_description = readme,
     long_description_content_type='text/x-rst',
     include_package_data = True,
-    keywords = ['Cosmology', 'Galaxies', 'Statistics', 'Astrostatistics' 'Cosmic Variance'],
+    keywords = ['Cosmology', 'Galaxies', 'Statistics', 'Astrostatistics', 'Cosmic Variance'],
     name = 'cosmic_variance',
     packages=find_packages(include=['cosmic_variance', 'cosmic_variance.*']),
     test_suite='tests',

@@ -2,7 +2,7 @@
 
 __author__ = """Christian Kragh Jespersen"""
 __email__ = 'ckragh@princeton.edu'
-__version__ = '0.1.0'
+__version__ = '0.10.0'
 
 from .quickcv import quickcv
 from .cosmic_variance import get_cv

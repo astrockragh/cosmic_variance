@@ -45,7 +45,7 @@ The main use of the package is through the get_cv function, which takes in a rec
 
         import cosmic_variance as cv
         import numpy as np
-        # use the main function, get_cv to calculate
+        # Example of using the main function, get_cv to calculate
         # cosmic variance for a single JWST pointing
 
         #### these arguments are required ####
@@ -54,12 +54,16 @@ The main use of the package is through the get_cv function, which takes in a rec
         zarray = np.array([7,8,9,11,13]) # redshift bin edges
 
         #### these arguments are optional ####
-        name = 'JWST' # name of the survey, if provided, the output file will be saved as dfs/{name}.csv along with a meta file
+        name = 'JWST' # name of the survey, if provided, the output file will be saved as dfs/{name}.csv along with a meta file.
+        # Default is None, in which case the output will not be saved
+
         acc = 'low' # accuracy of the calculation, 'low' or 'high, low is default, faster and sufficient for almost all applications
 
-        #If you want to use a different cosmology, you can specify it by the following in the get_cv call
-        # OmegaM = 0.308, OmegaL = 0.692, sig8 = 0.82
+        verbose = False # if True, will print out the progress of the calculation, default is False
 
-        cv_df = cv.get_cv(side1, side2, zarray, name = name, acc=acc)
+        #If you want to use a different cosmology, you can specify it by the following in the get_cv call
+        # OmegaM = 0.308, OmegaL = 0.692, OmegaBaryon = 0.022/(0.678)**2 sigma8 = 0.82, ns = 0.96, h = 0.678
+
+        cv_df = cv.get_cv(side1, side2, zarray, name = name, acc=acc, verbose = verbose)
 
 This will calculate the cosmic variance for a 2.2 arcmin x 4.4 arcmin survey in redshifts bin [7, 8], [8,9], [9,11], [11,13] and save the output.

@@ -1,12 +1,9 @@
 from .pofk import pofkint
 import numpy as np
 from scipy.integrate import nquad
-
 import time
 
-# xss = np.array([np.array([41.126813, 82.253627, 280.86420]), np.array([45.320475, 90.640949, 208.52065]), np.array([49.203843, 98.407686, 231.35671])]) #the unit is comoving megaparsec
-
-def intpk4(xs, acc = 'high', verbose = False):
+def intpk4(xs,  OmegaM = 0.308, OmegaBaryon = 0.022/(0.678)**2, sigma8 = 0.82, ns = 0.96, h = 0.678, acc = 'high', verbose = False):
 
 	"""" Solver for integral in equation 2 of https://arxiv.org/pdf/astro-ph/0109130.pdf
 	xs are the side lengths of the box in comoving Mpc
@@ -29,7 +26,7 @@ def intpk4(xs, acc = 'high', verbose = False):
 		return np.sin(k0*xs[0])/(k0*xs[0])*np.sin(k1*xs[1])/(k1*xs[1])*np.sin(k2*xs[2])/(k2*xs[2]) 
 
 	def integrand_idl(k0,k1,k2):
-		return window_idl(k0, k1, k2)**2*pofkint(k0,k1,k2)
+		return window_idl(k0, k1, k2)**2*pofkint(k0,k1,k2,  OmegaM=OmegaM, OmegaBaryon=OmegaBaryon, sigma8=sigma8, ns = ns, h = h)
 
 	start = time.time()
 
@@ -37,7 +34,7 @@ def intpk4(xs, acc = 'high', verbose = False):
 	end = time.time()
 
 	if verbose:
-		print(f'Integration time{end - start:.2f} seconds')
+		print(f'Integration time {end - start:.2f} seconds')
 
-	#factor of pi**3 is to normalize volume in k space, there are offsetting factors of 8 not included here
+	## factor of pi**3 is to normalize volume in k space, there are offsetting factors of 8 not included here
 	return integral[0]/np.pi**3
