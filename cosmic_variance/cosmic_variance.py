@@ -96,8 +96,10 @@ def get_cv(side1, side2, zarr, name = None, dz = None, acc = 'low', OmegaM = 0.3
             'verbose': verbose}
 
    df_meta = pd.DataFrame(metadict)
-
-   nz = len(zarr)-1
+   if dz is None:
+      nz = len(zarr)-1
+   else:
+      nz = len(zarr)
 
    columns = ['zmid', 'dz', 'cv_dm', 'cv_70', "cv_75", "cv_80", "cv_85", "cv_90", "cv_95", "cv_100", "cv_105", "cv_110"]
    df_values = pd.DataFrame(index = np.arange(nz), columns = columns)

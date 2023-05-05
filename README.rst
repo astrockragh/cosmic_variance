@@ -44,7 +44,7 @@ The main use of the package is through the get_cv function, which takes in a rec
         #### these arguments are required ####
         side1 = 2.2/60. # /60 to convert from arcmin to degrees
         side2 = 2*2.2/60. # /60 to convert from arcmin to degrees
-        zarray = np.array([7,8,9,11,13]) # redshift bin edges
+        zarray = np.array([7,8,9,11,13]) # redshift bin edges, if dz is given, this array will be the center of the redshift bins
 
         #### these arguments are optional ####
         name = 'JWST' # name of the survey, if provided, the output file will be saved as dfs/{name}.csv along with a meta file.
