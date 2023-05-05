@@ -28,7 +28,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Package to calculate cosmic variance in pencil-beam surveys",
+    description="Package to calculate cosmic variance in rectangular pencil-beam surveys",
     install_requires=requirements,
     license="MIT license",
     long_description = readme,
@@ -39,7 +39,7 @@ setup(
     packages=find_packages(include=['cosmic_variance', 'cosmic_variance.*']),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/astrockragh/pythonCV', #change later
-    version='0.0.9',
+    url='https://github.com/astrockragh/cosmic_variance',
+    version='0.1.0',
     zip_safe=False,
 )
