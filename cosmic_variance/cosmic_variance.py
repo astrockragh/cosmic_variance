@@ -110,7 +110,9 @@ def get_cv(side1, side2, zarr, name = None, dz = None, acc = 'low', OmegaM = 0.3
          zmid    = zarr[i+1]+zarr[i]
          zmid    = zmid/2
       else:
-         zmid    = zarr
+         if i == 0:
+            print('dz is given, zarr is redshift bin centers')
+         zmid    = zarr[i]
       
       s       = quickcv.quickcv(side1, side2, np.array([zmid]), np.array([dz]), OmegaM = OmegaM, OmegaL = OmegaL, OmegaBaryon = OmegaBaryon, \
                                 sigma8 = sigma8, ns = ns, h = h, acc = acc, verbose = verbose)

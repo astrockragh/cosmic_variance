@@ -71,7 +71,7 @@ def quickcv(side1, side2, za, deltaz, OmegaM = 0.31, OmegaL = 0.69, OmegaBaryon 
   x2a=3000./2.*(rza * side2)/radeg
   x3a=3000.*(rzmax-rzmin)/2.
   xs = np.array([x1a, x2a, x3a])
-  cvi = intpk4(xs, OmegaM = OmegaM, OmegaL = OmegaL, OmegaBaryon = OmegaBaryon, sigma8 = sigma8, ns = ns, h = h, acc =  acc, verbose =  verbose)
+  cvi = intpk4(xs, OmegaM = OmegaM, OmegaBaryon = OmegaBaryon, sigma8 = sigma8, ns = ns, h = h, acc =  acc, verbose =  verbose)
 
   #cvi is the fractional variance in a count in a rectangle
   #cvar is the fractional error (sigma), NOT VARIANCE
